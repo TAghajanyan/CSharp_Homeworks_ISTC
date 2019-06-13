@@ -133,101 +133,482 @@ namespace FirstStageExercises
             //Console.Write("Min Number = ");
             //Console.WriteLine(minNum);
 
+            ////delay
+            //Console.ReadKey();
+
             #endregion
 
             #region Exe_7
 
+            ////Խնդիր_7: Տրված են A և B(A < B) ամբողջ թվերը։ Գտնել[A, B] հատվածին պատկանող բոլոր ամբողջ թվերի գումարը։
 
+            //part1:
+            //Console.Write("Please input A & B (A < B)\nA=");
+            //int A = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("B=");
+            //int B = Convert.ToInt32(Console.ReadLine());
+
+            //if (A >= B)
+            //    goto part1;
+
+            //int sumNumbers = 0;
+            //for (int i = A; i <= B; i++)
+            //    sumNumbers += i;
+
+            //Console.WriteLine("Sum of numbers = " + sumNumbers);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_8
 
+            ////Խնդիր_8: Տրված են A և B(A < B) ամբողջ թվերը։ Գտնել[A, B] հատվածին պատկանող 3 - ին պատիկ առաջին թիվը։
 
+            //part1:
+            //Console.Write("Please input A & B (A < B)\nA=");
+            //int A = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("B=");
+            //int B = Convert.ToInt32(Console.ReadLine());
+
+            //if (A >= B)
+            //    goto part1;
+
+            //int firstNun = 0;
+
+            //for (int i = A; i <= B; i++)
+            //{
+            //    if (i%3 == 0)
+            //    {
+            //        firstNun = i;
+            //        break;
+            //    }
+            //}
+
+            //Console.WriteLine(firstNun);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_9
 
+            ////Խնդիր_9: Տրված է N բնական թիվը։ Հաշվել 1 + 1 / 2 + 1 / 3 + … +1 / N գումարը(այն իրական թիվ է)։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+            //double sum = 0;
+
+            //for (double i = 1; i <= N; i++)
+            //{
+            //    sum += 1 / i;
+            //}
+
+            //Console.Write("The expression value = {0}", sum);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_10
 
+            ////Խնդիր_10: Տրված է N բնական թիվը։ Հաշվել N2 +(N + 1)2 + (N + 2)2 + … +(2·N)2 գումարը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+            //int sum = 0;
+
+            //for (int i = 0; i <= N; i++)
+            //{
+            //    sum += (N + i) * 2;
+            //}
+
+            //Console.Write("The expression value = {0}", sum);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_11
 
+            ////Խնդիր_11: Տրված է N բնական թիվը։ Հաշվել 1.1 · 1.2 · 1.3 · … արտադրյալը(արտադրիչների քանակը N է)։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //double value = 1.1;
+            //double nextVlaue = 1.1;
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    nextVlaue += 0.1;
+            //    value *= nextVlaue;
+            //}
+
+            //Console.Write("The expression value = {0}", value);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_12
 
+            ////Խնդիր_12: Տրված է N բնական թիվը։ Հաշվել 1.1 – 1.2 + 1.3 – … արտահայտության արժեքը։ Նշանափոխ գումարելիների քանակը N է։ Պայմանական(if) օպերատոր չօգտագործել։
 
+            //Console.WriteLine("Please input any number");
+            //double N = Convert.ToDouble(Console.ReadLine());
+
+            //double elem = 0.1;
+            //double sum = 1.1;
+            //double nextValue = 1.1;
+            //for (int i = 1; i < N; i++)
+            //{
+            //    elem *= -1;
+            //    nextValue = -1 * nextValue + elem;
+            //    sum += nextValue;
+            //}
+
+            //Console.Write("The expression value = {0}", sum);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_13
 
+            //Խնդիր_13: Տրված է N բնական թիվը։ Հաշվել այդ թվի քառակուսին՝ օգտագործելով հետևյալ բանաձևը.N2 = 1 + 3 + 5 + … +(2 * N – 1). 
+            //          Հերթական գումարելին ավելացնելիս արտածել գումարի ընթացիկ արժեքը(արդյունքում կարտածվեն 1 - ից մինչև N բոլոր թվերի քառակուսիները)։
+
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int N2 = 1;
+            //int nextValue;
+            //Console.Write(N2);
+            //for (int i = 2; i <= N; i++)
+            //{
+            //    nextValue = i * 2 - 1;
+            //    N2 += nextValue;
+            //    Console.Write(" + " + nextValue); 
+            //}
+
+            //Console.WriteLine(" = " + N2);
+
+            ////delay
+            //Console.ReadKey();
 
 
             #endregion
+
             #region Exe_14
 
+            //Խնդիր_14: Ներածել n թիվը։ Արտածել yes, եթե այն հավասար է իր թվանշանների գումարի կրկնապատիկին, no՝ հակառակ դեպքում։
 
+            //GoTo Exe_28;
 
             #endregion
+
             #region Exe_15
 
+            //Խնդիր_15: Եռանիշ թվի առաջին թվանշանը ջնջել։ Եթե ստացված թիվը բազմապատկվի 7-ով, կստացվի սկզբնական թիվը։ Գտնել այդպիսի թվերը։
 
+            //GoTo Exe_29;
 
             #endregion
+
             #region Exe_16
 
+            ////Խնդիր_16: Հաշվել տրված բնական թվի թվանշանների գումարը, քանակը, արտադրյալը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int sumNumbers = 0, count = 0, productNumbers = 1,nextNum;
+
+            //do
+            //{
+            //    nextNum = N % 10;
+            //    sumNumbers += nextNum;
+            //    productNumbers *= nextNum;
+            //    count++;
+            //    N /= 10;
+
+            //} while (N % 10 != 0);
+
+            //Console.WriteLine(new string('-',20) + "\nSum of numbers = {0}\nProduct of numbers = {1}\nCount = {2}", sumNumbers, productNumbers, count);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_17
 
+            //Խնդիր_17:Գտնել տրված թվի կենտ թվանշաններից ամենափոքրը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int minValue;
+            //int nextValue;
+            //do
+            //{
+            //    do
+            //    {
+            //        minValue = N % 10;
+            //        N /= 10;
+
+            //    } while (minValue % 2 == 0);
+
+            //    nextValue = N % 10;
+
+            //    if (nextValue % 2 != 0) 
+            //    {
+            //        if (nextValue < minValue)
+            //        {
+            //            minValue = nextValue;
+            //        }
+            //    }
+
+            //    N /= 10;
+
+            //} while (N % 10 != 0);
+
+            //Console.WriteLine("The smallest odd digit is " + minValue);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_18
 
+            ////Խնդիր_18: Հաշվել տրված թվի 4 - ից մեծ կենտ թվանշանների գումարը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+            //int sum = 0;
+            //int nextNumner;
+            //do
+            //{
+            //    nextNumner = N % 10;
+            //    if (nextNumner % 2 != 0 && nextNumner > 4)
+            //        sum += nextNumner;
+            //    N /= 10;
+
+            //} while (N % 10 != 0);
+
+            //Console.WriteLine("Sum = " + sum);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_19
 
+            ////Խնդիր_19: Հաշվել տրված թվի 7 - ից փոքր զույգ թվանշանների արտադրյալը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+            //int product = 1;
+            //int nextNumner;
+            //do
+            //{
+            //    nextNumner = N % 10;
+            //    if (nextNumner % 2 == 0 && nextNumner < 7)
+            //        product *= nextNumner;
+            //    N /= 10;
+
+            //} while (N % 10 != 0);
+
+            //Console.WriteLine("Sum = " + product);
+
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_20
 
+            //Խնդիր_20: Գտնել տրված թվի ամենամեծ և ամենափոքր թվանշանների տարբերության քառակուսին։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int maxNumber = N % 10;
+            //N /= 10;
+            //int minNumber = N % 10;
+
+            //int nextNumber;
+            //int result;
+
+            //if (maxNumber < minNumber)
+            //{
+            //    int a = maxNumber;
+            //    maxNumber = minNumber;
+            //    minNumber = a;
+            //}
+
+            //do
+            //{
+            //    N /= 10;
+            //    nextNumber = N % 10;
+            //    if (nextNumber > maxNumber)
+            //    {
+            //        maxNumber = nextNumber;
+            //    }
+            //    else
+            //    {
+            //        if (nextNumber < minNumber)
+            //        {
+            //            minNumber = nextNumber;
+            //        }
+            //    }
+
+            //    result = (maxNumber - minNumber) * (maxNumber - minNumber);
+
+            //} while (N / 10 != 0);
+
+            //Console.WriteLine("Result = " + result);
+
+            //////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_21
 
+            ////Խնդիր_21: Արտածել տրված թվի բոլոր բաժանարարները։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    if (N % i == 0) 
+            //    {
+            //        Console.Write(i + "  ");
+            //    }
+            //}
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_22
 
+            ////Խնդիր_22: Հաշվել տրված թվի բոլոր բաժանարարների գումարը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int sum = 0;
+
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    if (N % i == 0)
+            //    {
+            //        sum += i;
+            //        Console.Write(i + "  ");
+            //    }
+            //}
+
+            //Console.WriteLine("Sum = " + sum);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_23
 
+            //Խնդիր_23: Հաշվել տրված թվի բոլոր բաժանարարների գումարի և դրանց քանակի քանորդը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //double sum = 0;
+            //double count = 0;
+
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    if (N % i == 0)
+            //    {
+            //        sum += i;
+            //        count++;
+            //        Console.Write(i + "  ");
+            //    }
+            //}
+            //Console.WriteLine("\nCount = " + count);
+            //Console.WriteLine("Sum = " + sum);
+            //Console.WriteLine("Result = " + sum / count);
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_24
 
+            //Խնդիր_24: Պարզել, հանդիսանում է, արդյոք, տրված թիվը 3 - ի աստիճան։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int count = 0;
+
+            //do
+            //{
+            //    count++;
+            //    N /= 3;
+            //} while (N / 3 != 0 && N % 3 == 0);
+
+
+            //if (N == 1)
+            //{
+            //    Console.WriteLine("N = 3^" + count);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("This number is not three degrees");
+            //}
+
+            ////delay
+            //Console.ReadKey();
 
             #endregion
+
             #region Exe_25
 
+            ////Խնդիր_25: Տրված n > 0 ամբողջ թվի համար հաշվել 2 - ի ամենամեծ աստիճանը, որը չի գերազանցում n - ը։
 
+            //Console.WriteLine("Please input any number");
+            //int N = Convert.ToInt32(Console.ReadLine());
+            //double result = 0 ;
+            //int count = 0;
+            //for (int i = 0; i < N/2; i++)
+            //{
+            //    if (Math.Pow(2,i) <= N)
+            //    {
+            //        result = Math.Pow(2, i);
+            //        count = i;
+            //    }
+            //}
+
+            //Console.WriteLine("Result: " + result + " = 2^" + count);
+
+            //////delay
+            //Console.ReadKey();
 
             #endregion
 
@@ -448,24 +829,7 @@ namespace FirstStageExercises
             //Console.ReadKey();
 
             #endregion
-            #region Exe_34
 
-            //Խնդիր_34: Տրված են X իրական և N բնական թվերը։ Գտնել X – X3 / (3!) +X5 / (5!) – … +(–1)N·X2·N + 1 / ((2·N + 1)!) արտահայտության արժեքը(N! = 1·2·…·N)։ Ստացված թիվը sin(X) - ի մոտավոր արժեքն է։
-
-            double x = 2.1, n = 33, sum = 1;
-
-
-            #endregion
-            #region Exe_35
-
-
-
-            #endregion
-            #region Exe_36
-
-
-
-            #endregion
         }
     }
 }

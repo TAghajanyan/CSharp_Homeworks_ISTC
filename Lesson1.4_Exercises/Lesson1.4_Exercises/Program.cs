@@ -31,9 +31,7 @@ namespace Lesson1._4_Exercises
             ////delay
             //Console.ReadKey();
 
-            #endregion
-
-            //----------------------------            
+            #endregion          
 
             #region Exe_2
 
@@ -67,8 +65,6 @@ namespace Lesson1._4_Exercises
             //Console.ReadKey();
 
             #endregion
-
-            //----------------------------
 
             #region Exe_3
 

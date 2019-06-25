@@ -163,7 +163,7 @@ namespace FirstStageExercisesWithRecursion
             Writeln(SequanceValue(InputInt32()));
 
             //Exe_10
-            Writeln(SequanceValue2(InputInt32()));
+            Writeln(SequanceValue2(InputInt32())); 
 
         }
     }

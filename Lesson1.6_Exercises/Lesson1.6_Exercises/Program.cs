@@ -145,7 +145,7 @@ namespace Lesson1._6_Exercises
 
             } while (true);
 
-            #endregion
+            #endregion 
 
         }
     }

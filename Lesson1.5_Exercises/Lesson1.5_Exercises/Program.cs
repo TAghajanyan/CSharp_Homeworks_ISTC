@@ -101,7 +101,7 @@ namespace Lesson1._5_Exercises
             ////delay
             //Console.ReadKey();
 
-            #endregion
+            #endregion 
 
         }
     }

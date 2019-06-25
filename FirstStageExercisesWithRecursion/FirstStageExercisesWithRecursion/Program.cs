@@ -132,38 +132,38 @@ namespace FirstStageExercisesWithRecursion
 
         static void Main(string[] args)
         {
-            //// Exe_1
-            //Writeln(SumOfDigits(InputInt32()));
+            // Exe_1
+            Writeln(SumOfDigits(InputInt32()));
 
-            ////Exe_2
-            //Writeln("Please input k & n");
-            //PrintNK(InputInt32(), InputInt32());
+            //Exe_2
+            Writeln("Please input k & n");
+            PrintNK(InputInt32(), InputInt32());
 
-            ////Exe_3
-            //PrintTillN(InputInt32() - 1);
+            //Exe_3
+            PrintTillN(InputInt32() - 1);
 
-            ////Exe_4
-            //PrintPow1To9(InputInt32());
+            //Exe_4
+            PrintPow1To9(InputInt32());
 
             //Exe_5
-            //Writeln(CoupleNumbersSum(InputInt32()));
+            Writeln(CoupleNumbersSum(InputInt32()));
 
-            ////Exe_6
-            //Writeln("Count of [A, B]");
-            //Writeln(CountOfA_B(InputInt32(), InputInt32()));
+            //Exe_6
+            Writeln("Count of [A, B]");
+            Writeln(CountOfA_B(InputInt32(), InputInt32()));
 
-            ////Exe_7
-            //Writeln("Sum of [A, B]");
-            //Writeln(SumOfA_B(InputInt32(), InputInt32()));
+            //Exe_7
+            Writeln("Sum of [A, B]");
+            Writeln(SumOfA_B(InputInt32(), InputInt32()));
 
-            ////Exe_8
-            //Writeln(FirstMultipleOf3(InputInt32(), InputInt32()));
+            //Exe_8
+            Writeln(FirstMultipleOf3(InputInt32(), InputInt32()));
 
-            ////Exe_9
-            //Writeln(SequanceValue(InputInt32()));
+            //Exe_9
+            Writeln(SequanceValue(InputInt32()));
 
-            ////Exe_10
-            //Writeln(SequanceValue2(InputInt32()));
+            //Exe_10
+            Writeln(SequanceValue2(InputInt32()));
 
         }
     }

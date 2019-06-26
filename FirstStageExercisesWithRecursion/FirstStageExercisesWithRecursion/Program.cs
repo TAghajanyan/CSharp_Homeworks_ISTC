@@ -8,7 +8,6 @@ namespace FirstStageExercisesWithRecursion
 {
     class Program
     {
-
         // Global Methods :D
         static int InputInt32()
         {
@@ -33,6 +32,12 @@ namespace FirstStageExercisesWithRecursion
             Console.WriteLine(str);
         }
 
+
+        static int ProdOfDigits(int number) // For Exe_16 
+        {
+            if (number / 10 == 0) return number;
+            return number % 10 * ProdOfDigits(number / 10);
+        }
 
         //Exe_1: Ներմուծել քառանիշ թիվ և հաշվել նրա թվանշանների գումարը:
         static int SumOfDigits(int number)
@@ -129,42 +134,252 @@ namespace FirstStageExercisesWithRecursion
             return 2 * (n + i) + SequanceValue2(n, ++i);
         }
 
+        //Exe_11: Տրված է N բնական թիվը։ Հաշվել 1.1 · 1.2 · 1.3 · … արտադրյալը (արտադրիչների քանակը N է)։
+        static double ProductFloat(int n)
+        {
+            string s = n.ToString();
+
+            if (n == 1)
+            {
+                return 1.1;
+            }
+            return (1.0 + n / Math.Pow(10,s.Length)) * ProductFloat(--n);
+        }
+
+        //Exe_12: 
+
+
+        //Exe_13: Տրված է N բնական թիվը։ Հաշվել այդ թվի քառակուսին՝ օգտագործելով հետևյալ բանաձևը. N2 = 1 + 3 + 5 + … + (2*N – 1). (N^2)
+        static int NPow(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+            return (2 * n - 1) + NPow(--n);
+        }
+
+        //Exe_14: Ներածել n թիվը։ Արտածել yes, եթե այն հավասար է իր թվանշանների գումարի կրկնապատիկին, no՝ հակառակ դեպքում։
+        static string YesOrNo(int n)
+        {
+            if (SumOfDigits(n) * 2 == n) return "Yes";
+            else return "No";
+        }
+
+        //Exe_15: Եռանիշ թվի առաջին թվանշանը ջնջել։ Եթե ստացված թիվը բազմապատկվի 7-ով, կստացվի սկզբնական թիվը։ Գտնել այդպիսի թվերը։
+        static void Function(int n = 100)
+        {
+            //if (n < 100 || n > 999)
+            //{
+            //    Writeln("N < 100 or N > 999");
+            //    return;
+            //}
+            if (n > 999) return;
+            if ((n % 100) * 7 == n)
+            {
+                Writeln(n);
+            }
+            Function(++n);
+            
+        }
+
+        //Exe_16: Հաշվել տրված բնական թվի թվանշանների գումարը, քանակը, արտադրյալը։
+        static void SumProdCount(int n)
+        {
+            string count = n.ToString();
+            Console.WriteLine("Sum of digits: " + SumOfDigits(n));
+            Console.WriteLine("Digits count: " + count.Length);
+            Console.WriteLine("Product of digits: " + ProdOfDigits(n));
+        }
+
+        //Exe_17: Գտնել տրված թվի կենտ թվանշաններից ամենափոքրը։
+        static int MinValue(char[] num, int i = 0)
+        {
+            char t;
+
+            if (i == num.Length - 1 && num[i] % 2 != 0) return int.Parse(num[i].ToString());
+            else if (i == num.Length - 1 && num[i] % 2 == 0) return 0;
+
+            if (num[i] % 2 == 0)
+                return MinValue(num, ++i);
+
+            if (num[i] < num[i + 1])
+            {
+                t = num[i];
+                num[i] = num[i + 1];
+                num[i + 1] = t;
+                return MinValue(num, ++i);
+            }
+            else return MinValue(num, ++i);
+        }
+
+        //Exe_18: Հաշվել տրված թվի 4-ից մեծ կենտ թվանշանների գումարը։
+        static int SumDigitsBig4(int n)
+        {
+            if (n == 0) return 0;
+            if (n % 10 > 4 && n % 2 != 0) 
+            {
+                return (n % 10) + SumDigitsBig4(n / 10);
+            }
+            else
+            {
+                return SumDigitsBig4(n / 10);
+            }
+        }
+
+        //Exe_19: Հաշվել տրված թվի 7-ից փոքր զույգ թվանշանների արտադրյալը։
+        static int ProdDigitsSmall7(int n)
+        {
+            if (n == 0) return 1;
+            if (n % 10 < 7 && n % 2 == 0)
+            {
+                return (n % 10) * ProdDigitsSmall7(n / 10);
+            }
+            else
+            {
+                return ProdDigitsSmall7(n / 10);
+            }
+        }
+
+
+        //Exe_20: Գտնել տրված թվի ամենամեծ և ամենափոքր թվանշանների տարբերության քառակուսին։
+        static int MinDigit(int number)
+        {
+            if (number / 10 == 0) return number;
+            return Math.Min(number % 10, MinDigit(number / 10));
+        }
+
+        static int MaxDigit(int number)
+        {
+            if (number / 10 == 0) return number;
+            return Math.Max(number % 10, MaxDigit(number / 10));
+        }
+
+        static double DifferenceBigAndSmall(int n)
+        {
+            return Math.Pow((MaxDigit(n) - MinDigit(n)), 2);
+        }
+        //Exe_20: End.
+
+
 
         static void Main(string[] args)
         {
             // Exe_1
             Writeln(SumOfDigits(InputInt32()));
-
+            
             //Exe_2
             Writeln("Please input k & n");
             PrintNK(InputInt32(), InputInt32());
-
+            
             //Exe_3
             PrintTillN(InputInt32() - 1);
-
+            
             //Exe_4
             PrintPow1To9(InputInt32());
-
+            
             //Exe_5
             Writeln(CoupleNumbersSum(InputInt32()));
-
+            
             //Exe_6
             Writeln("Count of [A, B]");
             Writeln(CountOfA_B(InputInt32(), InputInt32()));
-
+            
             //Exe_7
             Writeln("Sum of [A, B]");
             Writeln(SumOfA_B(InputInt32(), InputInt32()));
-
+            
             //Exe_8
             Writeln(FirstMultipleOf3(InputInt32(), InputInt32()));
-
+            
             //Exe_9
             Writeln(SequanceValue(InputInt32()));
-
+            
             //Exe_10
-            Writeln(SequanceValue2(InputInt32())); 
+            Writeln(SequanceValue2(InputInt32()));
+
+            //Exe_11
+            Writeln(ProductFloat(InputInt32()));
+
+            //Exe_12
+
+
+            //Exe_13
+            Writeln(NPow(InputInt32()));
+
+            //Exe_14
+            Console.WriteLine(YesOrNo(InputInt32()));
+
+            //Exe_15
+            Function(100);
+
+            //Exe_16
+            SumProdCount(InputInt32());
+
+            //Exe_17
+            string str = InputInt32().ToString();
+            Writeln(MinValue(str.ToCharArray()));
+
+            //Exe_18
+            Writeln(SumDigitsBig4(InputInt32()));
+
+            //Exe_19
+            Writeln(ProdDigitsSmall7(InputInt32()));
+
+            //Exe_20
+            Writeln(DifferenceBigAndSmall(InputInt32()));
+
+
+
+
+            /////////////////////////////////////////////////////////
+            ////    init();
+
+            ////    push('a');
+            ////    push('b');
+            ////    push('c');
+
+            ////    Console.WriteLine(stack[0]);
+            ////    Console.WriteLine(stack[1]);
+            ////    Console.WriteLine(stack[2]);
+
+            ////    Console.WriteLine(new string('-', 15));
+
+            ////    for (int i = 1; i <= 3; i++)
+            ////    {
+            ////        Console.WriteLine(pop());
+            ////    }
+
+            ////    Console.ReadKey();
+
 
         }
+
+        ////static char[] stack = new char[10];
+        ////static int index = 10; //For example tos = 10;
+
+        ////static void init()
+        ////{
+        ////    index = 0;
+        ////}
+
+        ////static void push(char ch)
+        ////{
+        ////    if (index == 10)
+        ////    {
+        ////        return;
+        ////    }
+        ////    stack[index] = ch;
+        ////    index++;
+        ////}
+        ////static char pop()
+        ////{
+        ////    if (index == 0)
+        ////    {
+        ////        return '0';
+        ////    }
+        ////    index--;
+        ////    return stack[index];
+        ////}
     }
 }

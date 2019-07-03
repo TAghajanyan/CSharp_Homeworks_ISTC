@@ -261,73 +261,110 @@ namespace FirstStageExercisesWithRecursion
         }
         //Exe_20: End.
 
+        //Exe_22: Հաշվել տրված թվի բոլոր բաժանարարների գումարը։
+        static int SumOfDivisor(int n, int i)
+        {
+            if (i == 1) return 1;
+
+            if (n % i == 0) return i + SumOfDivisor(n, --i);
+            return SumOfDivisor(n, --i);
+        }
 
 
+        static int commonCharacterCount(string s1, string s2)
+        {
+
+            int count = 0;
+            int t = 0;
+            char[] c2 = s2.ToCharArray();
+            for (int i = 0; i < s1.Length; i++)
+            {
+                for (int j = t; j < c2.Length; j++)
+                {
+                    if (s1[i] == c2[j])
+                    {
+                        count++;
+                        c2[j] = c2[t];
+                        t++;
+                        break;
+                    }
+                }
+            }
+            return count;
+        }
         static void Main(string[] args)
         {
-            // Exe_1
-            Writeln(SumOfDigits(InputInt32()));
+
+            commonCharacterCount("aa", "aaa");
+
+            //// Exe_1
+            //Writeln(SumOfDigits(InputInt32())); 
             
-            //Exe_2
-            Writeln("Please input k & n");
-            PrintNK(InputInt32(), InputInt32());
+            ////Exe_2
+            //Writeln("Please input k & n");
+            //PrintNK(InputInt32(), InputInt32());
             
-            //Exe_3
-            PrintTillN(InputInt32() - 1);
+            ////Exe_3
+            //PrintTillN(InputInt32() - 1);
             
-            //Exe_4
-            PrintPow1To9(InputInt32());
+            ////Exe_4
+            //PrintPow1To9(InputInt32());
             
-            //Exe_5
-            Writeln(CoupleNumbersSum(InputInt32()));
+            ////Exe_5
+            //Writeln(CoupleNumbersSum(InputInt32()));
             
-            //Exe_6
-            Writeln("Count of [A, B]");
-            Writeln(CountOfA_B(InputInt32(), InputInt32()));
+            ////Exe_6
+            //Writeln("Count of [A, B]");
+            //Writeln(CountOfA_B(InputInt32(), InputInt32()));
             
-            //Exe_7
-            Writeln("Sum of [A, B]");
-            Writeln(SumOfA_B(InputInt32(), InputInt32()));
+            ////Exe_7
+            //Writeln("Sum of [A, B]");
+            //Writeln(SumOfA_B(InputInt32(), InputInt32()));
             
-            //Exe_8
-            Writeln(FirstMultipleOf3(InputInt32(), InputInt32()));
+            ////Exe_8
+            //Writeln(FirstMultipleOf3(InputInt32(), InputInt32()));
             
-            //Exe_9
-            Writeln(SequanceValue(InputInt32()));
+            ////Exe_9
+            //Writeln(SequanceValue(InputInt32()));
             
-            //Exe_10
-            Writeln(SequanceValue2(InputInt32()));
+            ////Exe_10
+            //Writeln(SequanceValue2(InputInt32()));
 
-            //Exe_11
-            Writeln(ProductFloat(InputInt32()));
+            ////Exe_11
+            //Writeln(ProductFloat(InputInt32()));
 
-            //Exe_12
+            ////Exe_12
 
 
-            //Exe_13
-            Writeln(NPow(InputInt32()));
+            ////Exe_13
+            //Writeln(NPow(InputInt32()));
 
-            //Exe_14
-            Console.WriteLine(YesOrNo(InputInt32()));
+            ////Exe_14
+            //Console.WriteLine(YesOrNo(InputInt32()));
 
-            //Exe_15
-            Function(100);
+            ////Exe_15
+            //Function(100);
 
-            //Exe_16
-            SumProdCount(InputInt32());
+            ////Exe_16
+            //SumProdCount(InputInt32());
 
-            //Exe_17
-            string str = InputInt32().ToString();
-            Writeln(MinValue(str.ToCharArray()));
+            ////Exe_17
+            //string str = InputInt32().ToString();
+            //Writeln(MinValue(str.ToCharArray()));
 
-            //Exe_18
-            Writeln(SumDigitsBig4(InputInt32()));
+            ////Exe_18
+            //Writeln(SumDigitsBig4(InputInt32()));
 
-            //Exe_19
-            Writeln(ProdDigitsSmall7(InputInt32()));
+            ////Exe_19
+            //Writeln(ProdDigitsSmall7(InputInt32()));
 
-            //Exe_20
-            Writeln(DifferenceBigAndSmall(InputInt32()));
+            ////Exe_20
+            //Writeln(DifferenceBigAndSmall(InputInt32()));
+
+            //Exe_22
+            //int n = InputInt32();
+            //Writeln(SumOfDivisor(n, n));
+
 
 
 

@@ -63,7 +63,7 @@ namespace SecondStage.Polymorphism
 
             Console.WriteLine("\n" + new string('-',15));
 
-            user = (User)usersBase; // DownCast
+            user = usersBase as User; // DownCast
             user.Info();
 
 

@@ -72,6 +72,8 @@ namespace SecondStage.Polymorphism
             user.InfoAUser(123546);
             
             Console.ReadKey();
+
+            
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Point_Struct
+﻿namespace Point_Struct
 {
     interface IPointer
     {

@@ -10,7 +10,9 @@ namespace Point_Struct
     {
         static void Result(IPointer obj1, IPointer obj2)
         {
-            Console.WriteLine("Method Equals: " + obj1.Equals(obj2));
+            Console.WriteLine("Type: " + obj1.GetType());
+
+            Console.WriteLine("\nMethod Equals: " + obj1.Equals(obj2));
             Console.WriteLine("Method TypeEquals: " + obj1.TypeEquals(obj2));
 
             Console.WriteLine("Area (0,0): " + obj1.GetArea());
@@ -22,15 +24,14 @@ namespace Point_Struct
             Console.WriteLine("Perimeter (0,0): " + obj1.GetPerimeter());
             Console.WriteLine("Perimeter (second point): " + obj1.GetPerimeter(obj2));
 
-            Console.WriteLine("Type: " + obj1.GetType());
             Console.WriteLine("Method ToString: " + obj1.ToString());
             Console.WriteLine("Hash code: " + obj1.GetHashCode());
         }
 
         static void Main(string[] args)
         {
-            Point2D firstPoint2D = new Point2D(4,6);
-            Point2D secondPoint2D = new Point2D(9,2);
+            Point2D firstPoint2D = new Point2D(4, 6);
+            Point2D secondPoint2D = new Point2D(9, 2);
 
             Result(firstPoint2D, secondPoint2D);
 
@@ -41,6 +42,7 @@ namespace Point_Struct
 
             Result(firstPoint3D, secondPoint3D);
 
+            Console.ReadKey();
         }
     }
 }

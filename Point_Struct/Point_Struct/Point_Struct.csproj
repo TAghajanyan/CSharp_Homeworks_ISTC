@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B542E92-7AE6-443A-977F-1499DC0A590A}</ProjectGuid>
+    <ProjectGuid>{9255CC83-4A45-4D85-B4D9-172A1702C330}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_3D_Point</RootNamespace>
-    <AssemblyName>_3D_Point</AssemblyName>
+    <RootNamespace>Point_Struct</RootNamespace>
+    <AssemblyName>Point_Struct</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPointer.cs" />
     <Compile Include="Point2D.cs" />
     <Compile Include="Point3D.cs" />
-    <Compile Include="Pointer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

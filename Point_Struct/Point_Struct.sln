@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point_Struct", "_3D_Point\Point_Struct.csproj", "{5B542E92-7AE6-443A-977F-1499DC0A590A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point_Struct", "Point_Struct\Point_Struct.csproj", "{9255CC83-4A45-4D85-B4D9-172A1702C330}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5B542E92-7AE6-443A-977F-1499DC0A590A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B542E92-7AE6-443A-977F-1499DC0A590A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B542E92-7AE6-443A-977F-1499DC0A590A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B542E92-7AE6-443A-977F-1499DC0A590A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9255CC83-4A45-4D85-B4D9-172A1702C330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9255CC83-4A45-4D85-B4D9-172A1702C330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9255CC83-4A45-4D85-B4D9-172A1702C330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9255CC83-4A45-4D85-B4D9-172A1702C330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AEC80038-7018-4CDA-9D4F-122EAECD34AA}
+		SolutionGuid = {B290EFD5-BB30-439F-83B9-6EA0685E6730}
 	EndGlobalSection
 EndGlobal

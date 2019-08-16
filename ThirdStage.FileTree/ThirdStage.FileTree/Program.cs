@@ -17,28 +17,26 @@ namespace ThirdStage.FileTree
 
             pos += 3;
 
-            if (directory.GetDirectories().Length != 0)
+            for (int i = 0; i < directory.GetDirectories().Length; i++)
             {
-                for (int i = 0; i < directory.GetDirectories().Length; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(new string(' ', pos) + directory.GetDirectories()[i].Name);
-                    folderCount++;
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(new string(' ', pos) + directory.GetDirectories()[i].Name);
+                folderCount++;
+                Console.ForegroundColor = ConsoleColor.Gray;
 
-                    try
-                    {
-                        PrintFolders(directory.GetDirectories()[i], pos);
-                    }
-                    catch (PathTooLongException e)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine(e.Message);
-                    }catch(UnauthorizedAccessException e)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine(e.Message);
-                    }
+                try
+                {
+                    PrintFolders(directory.GetDirectories()[i], pos);
+                }
+                catch (PathTooLongException e)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine(e.Message);
+                }
+                catch (UnauthorizedAccessException e)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine(e.Message);
                 }
             }
         }

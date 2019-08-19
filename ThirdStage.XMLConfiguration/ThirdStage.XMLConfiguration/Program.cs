@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml;
 using System.Configuration;
-using System.Collections;
+using System.Collections.Specialized;
 
 namespace ThirdStage.XMLConfiguration
 {
@@ -10,12 +10,13 @@ namespace ThirdStage.XMLConfiguration
     {
         static void Main(string[] args)
         {
-            var state = ConfigurationSettings.AppSettings;
+            NameValueCollection state = ConfigurationSettings.AppSettings;
+            int count = 0;
 
             Console.WriteLine("Key / Value\n------------");
             foreach (string item in state)
             {
-                Console.WriteLine(item + " -> " + state.Get(item));
+                Console.WriteLine($"<{++count}>: " + item + " -> " + state[item]);
             }
 
             Console.ReadKey();

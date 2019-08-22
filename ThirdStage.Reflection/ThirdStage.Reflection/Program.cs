@@ -7,10 +7,67 @@ using System.Threading.Tasks;
 
 namespace ThirdStage.Reflection
 {
+    class MyException : Exception
+    {
+        public override string Message { get; }
+
+        public MyException(string message)
+        {
+            Message = message;
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.All)]
+    class MyClassAttribute : Attribute
+    {
+        int a;
+        int b;
+
+        public MyClassAttribute(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+
+            if (this.a > this.b)
+            {
+                Console.WriteLine("a > b");
+            }
+            else
+            {
+                throw new MyException("a < b: Exception");
+            }
+        }
+    }
+
+    [MyClass(1, 2)]
+    class My
+    {
+        [MyClass(32, 2)]
+        public void Method()
+        {
+            Console.WriteLine("Method();");
+            try
+            {
+                Method();
+            }
+            catch (MyException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+
+
     class Program
     {
         static void Main(string[] args)
         {
+
+            My my = new My();
+            my.Method();
+
+
+
             Type type = typeof(Math);
             
             string fullName = type.FullName;

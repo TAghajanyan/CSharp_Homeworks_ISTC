@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using System.Threading;
 
@@ -16,49 +17,49 @@ namespace ThirdStage.ThreadsAndFiles
             this.path1 = path1;
             this.path2 = path2;
 
-            FileStream file1 = new FileStream(path1, FileMode.OpenOrCreate);
-            FileStream file2 = new FileStream(path2, FileMode.OpenOrCreate);
+            byte[] buffer1 = GetBuffer(context1);
+            byte[] buffer2 = GetBuffer(context2);
 
-            byte[] buffer1 = GetBuffer(context1 + "\n");
-            byte[] buffer2 = GetBuffer(context2 + "\n");
-            file1.Write(buffer1, 0, buffer1.Length);
-            file2.Write(buffer2, 0, buffer2.Length);
+            using (FileStream file1 = new FileStream(path1, FileMode.OpenOrCreate))
+            {
+                using (FileStream file2 = new FileStream(path2, FileMode.OpenOrCreate))
+                {
+                    file1.Write(buffer1, 0, buffer1.Length);
+                    file2.Write(buffer2, 0, buffer2.Length);
 
-            file1.Close();
-            file2.Close();
+                    file1.Close();
+                    file2.Close();
+                }
+            }
         }
 
         public ReadWriteWithThreads(string path1, string path2, string path3, string context1, string context2, string context3) : this(path1, path2, context1, context2)
         {
             this.path3 = path3;
 
-            FileStream file3 = new FileStream(path3, FileMode.OpenOrCreate);
-
-            byte[] buffer3 = GetBuffer(context3 + "\n");
-            file3.Write(buffer3, 0, buffer3.Length);
-
-            file3.Close();
+            byte[] buffer3 = GetBuffer("561651658");
+            using (FileStream file3 = new FileStream(path3, FileMode.OpenOrCreate))
+            {
+                file3.Write(buffer3, 0, buffer3.Length);
+                file3.Close();
+            }
         }
 
         private void ReadFiles(object path)
         {
-            StreamReader reader;
-            lock (this)
+            using (StreamReader reader = new StreamReader((string)path))
             {
-                reader = new StreamReader((string)path);
-                System.Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
-            }
+                if (Thread.CurrentThread.ManagedThreadId == 3)
+                {
+                    Thread.Sleep(1);
+                }
 
-            if (Thread.CurrentThread.ManagedThreadId == 3)
-            {
-                Thread.Sleep(1);
-            }
-
-            lock (this)
-            {
-                System.Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
-                WriteFile(reader.ReadToEnd());
-                reader.Close();
+                lock (this)
+                {
+                    System.Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+                    WriteFile(reader.ReadToEnd());
+                    reader.Close();
+                }
             }
         }
 
@@ -71,7 +72,7 @@ namespace ThirdStage.ThreadsAndFiles
 
         private byte[] GetBuffer(string context)
         {
-            return Encoding.UTF7.GetBytes(context);
+            return Encoding.UTF8.GetBytes(context + Environment.NewLine);
         }
 
         public void Threads()

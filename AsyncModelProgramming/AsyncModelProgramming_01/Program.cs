@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AsyncModelProgramming_01
 {
@@ -22,9 +19,7 @@ namespace AsyncModelProgramming_01
             stream.EndRead(asyncResult);
 
             foreach (char item in ASCIIEncoding.UTF8.GetChars(array))
-            {
                 Console.Write(item);
-            }
 
             stream.Close();
 

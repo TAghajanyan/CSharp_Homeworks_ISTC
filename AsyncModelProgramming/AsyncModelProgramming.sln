@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncModelProgramming_01", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL_01", "TPL_01\TPL_01.csproj", "{A4696358-D8DA-4DC4-B61D-70EE729A0FD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL_02_ParallelClass", "TPL_02_ParallelClass\TPL_02_ParallelClass.csproj", "{01F9E4B7-5815-4F3E-86FF-3A4454A96274}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL_02_ParallelOptions", "TPL_02_ParallelClass\TPL_02_ParallelOptions.csproj", "{01F9E4B7-5815-4F3E-86FF-3A4454A96274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

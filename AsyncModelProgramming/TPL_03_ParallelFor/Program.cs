@@ -23,7 +23,7 @@ namespace TPL_03_ParallelFor
                 arr[i] = i;
             timer.Stop();
 
-            Console.WriteLine("Simple For {0} second.", timer.Elapsed.TotalSeconds);
+            Console.WriteLine("Simple For {0} second.", timer.Elapsed.TotalSeconds); // 0.0115162 second.
 
 
             timer.Reset();
@@ -31,7 +31,7 @@ namespace TPL_03_ParallelFor
             Parallel.For(0, arr.Length, options, action);
             timer.Stop();
 
-            Console.WriteLine("ParallelFor [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds);
+            Console.WriteLine("ParallelFor [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds);// 0.0316695 second.
 
             //------------------------------------------
 
@@ -42,7 +42,7 @@ namespace TPL_03_ParallelFor
             Parallel.For(0, arr.Length, options, action);
             timer.Stop();
 
-            Console.WriteLine("ParallelFor [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds);
+            Console.WriteLine("ParallelFor [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds); // 0.0097542 second.
 
             //------------------------------------------
 
@@ -53,7 +53,7 @@ namespace TPL_03_ParallelFor
             Parallel.For(0, arr.Length, options, action);
             timer.Stop();
 
-            Console.WriteLine("ParallelFor [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds);
+            Console.WriteLine("ParallelFor [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds); //0.0049872 second.
 
             //------------------------------------------
 
@@ -79,7 +79,7 @@ namespace TPL_03_ParallelFor
 
             if (res.IsCompleted)
             {
-                Console.WriteLine("\nParallelFor with ParallelLoopState [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds);
+                Console.WriteLine("\nParallelFor with ParallelLoopState [Logical processors]: {0} || {1} second.", options.MaxDegreeOfParallelism, timer.Elapsed.TotalSeconds); // 0.0190463 second.
             }
             else
             {

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL_02_ParallelOptions", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL_03_ParallelFor", "TPL_03_ParallelFor\TPL_03_ParallelFor.csproj", "{4424006F-7A6E-4C94-8E00-19B4291AD1C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL_04_ParallelForeach", "TPL_04_ParallelForeach\TPL_04_ParallelForeach.csproj", "{19A3BDC2-66C8-4D2C-BDD4-0E3BF70B7695}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4424006F-7A6E-4C94-8E00-19B4291AD1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4424006F-7A6E-4C94-8E00-19B4291AD1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4424006F-7A6E-4C94-8E00-19B4291AD1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A3BDC2-66C8-4D2C-BDD4-0E3BF70B7695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A3BDC2-66C8-4D2C-BDD4-0E3BF70B7695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A3BDC2-66C8-4D2C-BDD4-0E3BF70B7695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A3BDC2-66C8-4D2C-BDD4-0E3BF70B7695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

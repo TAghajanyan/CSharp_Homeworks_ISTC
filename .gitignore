@@ -328,3 +328,9 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/ThirdStage.AsyncModelProgramming/AsyncAwait_Keywords/Properties/AssemblyInfo.cs
+/ThirdStage.AsyncModelProgramming/AsyncAwait_Keywords/Properties
+/ThirdStage.AsyncModelProgramming/AsyncAwait_Keywords/Program.cs
+/ThirdStage.AsyncModelProgramming/AsyncAwait_Keywords/AsyncAwait_Keywords.csproj
+/ThirdStage.AsyncModelProgramming/AsyncAwait_Keywords/App.config
+/ThirdStage.AsyncModelProgramming/AsyncAwait_Keywords

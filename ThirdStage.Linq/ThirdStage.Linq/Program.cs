@@ -9,12 +9,12 @@ namespace ThirdStage.Linq
         {
             List<MyClass> myClasses = new List<MyClass>
             {
-                new MyClass{Filed1 = 1, Filed2 = 2, Filed3 = 3,},
-                new MyClass{Filed1 = 4, Filed2 = 5, Filed3 = 6,},
-                new MyClass{Filed1 = 7, Filed2 = 8, Filed3 = 9,}
+                new MyClass{Field1 = 1, Field2 = 2, Field3 = 3,},
+                new MyClass{Field1 = 4, Field2 = 5, Field3 = 6,},
+                new MyClass{Field1 = 7, Field2 = 8, Field3 = 9,}
             };
 
-            var myCollection = myClasses.Where(x => x.Filed1 % 2 != 0 || x.Filed2 % 2 != 0).Select(x => x.Filed3);
+            var myCollection = myClasses.Where(x => x.Field1 % 2 != 0 || x.Field2 % 2 != 0).Select(x => x.Field3);
 
             int i = 0;
             foreach (var item in myCollection)

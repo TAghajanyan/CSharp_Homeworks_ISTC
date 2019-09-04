@@ -3,44 +3,6 @@ using System.Collections.Generic;
 
 namespace ThirdStage.Linq
 {
-
-    class MyClass
-    {
-        public int Filed1 { get; set; }
-        public int Filed2 { get; set; }
-        public int Filed3 { get; set; }
-    }
-
-    static class MyLinq
-    {
-        public static IEnumerable<object> Select<TTtpe>(this IEnumerable<TTtpe> source, Func<TTtpe, object> func)
-        {
-            foreach (TTtpe item in source)
-            {
-                yield return func.Invoke(item);
-            }
-        }
-
-        public static IEnumerable<TType> Where<TType>(this IEnumerable<TType> source, Func<TType, bool> func)
-        {
-            foreach (TType item in source)
-            {
-                if (func.Invoke(item))
-                    yield return item;
-            }
-        }
-
-        public static object FirstOrDefault<TType>(this IEnumerable<TType> source)
-        {
-            IEnumerator<TType> enumerator = source.GetEnumerator();
-
-            if (enumerator.MoveNext())
-                return enumerator.Current;
-            else
-                return default(TType);
-        }
-    }
-
     class Program
     {
         static void Main(string[] args)

@@ -45,9 +45,9 @@
 
         private static void Swap<T>(ref T t1, ref T t2) where T : struct
         {
-            t1 = (dynamic)t1 + (dynamic)t2;
-            t2 = (dynamic)t1 - (dynamic)t2;
-            t1 = (dynamic)t1 - (dynamic)t2;
+            t1 = (dynamic)t1 + t2;
+            t2 = (dynamic)t1 - t2;
+            t1 = (dynamic)t1 - t2;
         }
     }
 }
